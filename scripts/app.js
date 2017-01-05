@@ -22,7 +22,7 @@ var app = angular.module('app', ['ngRoute', 'ngResource'])
                             templateUrl: 'templates/addCostos.html',
                             controller: 'AddCostoCtrl'
                         })
-                        .when('/view/:id', {
+                        .when('/view/:id/:numero', {
                             templateUrl: 'templates/view.html',
                             controller: 'ViewCtrl'
                         })
@@ -185,8 +185,10 @@ var app = angular.module('app', ['ngRoute', 'ngResource'])
         
         .controller('ViewCtrl', ['$scope', 'Recargas', 'Consumos', '$routeParams', function ($scope, Recargas, Consumos, $routeParams) {
                 var id = $routeParams.id;
+                var numero = $routeParams.numero;
+                console.log(numero);
 
-                Recargas.get({id: id,numero:"3102487538"}, function (data) {
+                Recargas.get({id: id,numero:numero}, function (data) {
                     $scope.recarga = data.response;
                 });
 
