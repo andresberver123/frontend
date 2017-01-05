@@ -1,0 +1,13 @@
+<h1>{{$parent.settings.pageTitle}}</h1>
+
+<p ng-show="$parent.settings.success" class="alert alert-success">{{$parent.settings.success}}</p>
+<div class="required-field-block">
+        <input type="text" placeholder="Numero celular" ng-model="recarga.numero" class="form-control">
+        <input type="text" placeholder="Valor" ng-model="recarga.valor" class="form-control">
+    <br>
+    <p ng-repeat="costos in costos" ng-if="costos.status === '1'">
+            Costo actual: ${{costos.costo_seg}} x segundo
+    </p>
+  
+</div>
+<button class="btn btn-primary" ng-click="submit($parent.recarga)">{{$parent.settings.action}}</button>

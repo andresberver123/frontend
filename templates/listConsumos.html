@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="panel-body">
+        <div class="alert alert-warning" ng-hide="consumos">
+            <p>No hay consumos en la base de datos...</p>
+        </div>
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Numero</th>
+                    <th>Consumo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="consumos in consumos">
+                    <td>{{consumos.id}}</td>
+                    <td>{{consumos.numero_celular}}</td>
+                    <td>{{consumos.consumo_seg}} segundos</td>
+                    <td>{{consumos.fecha}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

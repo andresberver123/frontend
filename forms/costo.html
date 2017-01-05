@@ -1,0 +1,7 @@
+<h1>{{$parent.settings.pageTitle}}</h1>
+
+<p ng-show="$parent.settings.success" class="alert alert-success">{{$parent.settings.success}}</p>
+<div class="required-field-block">
+    <input type="text" placeholder="Costo ej: 1.58" ng-model="costo.costo_seg" class="form-control">
+</div>
+<button class="btn btn-primary" ng-click="submit($parent.costo)">{{$parent.settings.action}}</button>

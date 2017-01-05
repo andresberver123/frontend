@@ -1,0 +1,9 @@
+<h1>{{$parent.settings.pageTitle}}</h1>
+
+<p ng-show="$parent.settings.success" class="alert alert-success">{{$parent.settings.success}}</p>
+<p ng-show="$parent.settings.error" class="alert alert-error">{{$parent.settings.error}}</p>
+<div class="required-field-block">
+    <input type="text" placeholder="Consumo en segundos" ng-model="consumo.consumo_seg" class="form-control">
+    <input type="text" placeholder="Numero Celular" ng-model="consumo.numero_celular" class="form-control">
+</div>
+<button class="btn btn-primary" ng-click="submit($parent.consumo)">{{$parent.settings.action}}</button>

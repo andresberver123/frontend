@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="panel-body">
+        <div class="alert alert-warning" ng-hide="recargas">
+            <p>No hay recargas en la base de datos...</p>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="recargas in recargas">
+                <a href="#/edit/{{recargas.id}}">Cel: {{recargas.numero}}</a>
+
+                <div class="pull-right action-buttons">
+                    <a href="#/view/{{recargas.id}}">
+                        Saldo actual
+                    </a>
+                    <a ng-click="remove(recargas.id)" class="trash"><span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
